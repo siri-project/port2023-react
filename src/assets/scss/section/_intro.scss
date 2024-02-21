@@ -1,0 +1,138 @@
+#intro {
+	height: 100vh;
+	.intro-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-end;
+		width: 100%;
+		height: 100%;
+		padding: 16px;
+		@media (max-width: 800px) {
+			justify-content: center;
+		}
+	}
+	.intro-title {
+		line-height: 1;
+		font-size: 10vw;
+		font-weight: 800;
+		letter-spacing: -0.3vw;
+		text-transform: uppercase;
+		text-indent: -0.5vw;
+		white-space: nowrap;
+		@media (max-width: 320px) {
+			display: none;
+		}
+	}
+	.intro-text {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 40vh;
+		color: var(--white);
+		background-color: var(--black);
+		&:hover {
+			.text {
+				opacity: 0;
+			}
+			.img {
+				filter: grayscale(0);
+			}
+		}
+		.text {
+			position: relative;
+			z-index: 100;
+			text-align: center;
+			line-height: 1;
+			font-size: 3vw;
+			text-transform: uppercase;
+			text-decoration: underline;
+			@include transition(all, 0.3s);
+			cursor: all-scroll;
+			@media (max-width: 800px) {
+				font-size: 24px;
+			}
+		}
+		.img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 30vh;
+			height: 30vh;
+			overflow: hidden;
+			border-radius: 50%;
+			filter: grayscale(100%);
+			@include translateXY(-50%, -50%);
+			@include transition(all, 0.3s);
+			@media (max-width: 320px) {
+				width: 20vh;
+				height: 20vh;
+			}
+		}
+	}
+	.intro-lines {
+		width: 100%;
+		&.bottom {
+			.line {
+				display: none;
+				margin-top: 0.5vw;
+				margin-bottom: 0;
+				@media (max-width: 800px) {
+					display: block;
+				}
+				&:nth-child(1) {
+					height: 25px;
+				}
+				&:nth-child(2) {
+					height: 17px;
+				}
+				&:nth-child(3) {
+					height: 13px;
+				}
+				&:nth-child(4) {
+					height: 9px;
+				}
+				&:nth-child(5) {
+					height: 5px;
+				}
+				&:nth-child(6) {
+					height: 2px;
+				}
+				&:nth-child(7) {
+					height: 1px;
+				}
+			}
+		}
+		.line {
+			display: block;
+			width: 100%;
+			// height: 1px;
+			margin-bottom: 0.5vw;
+			background-color: --var(black);
+			&:nth-child(1) {
+				height: 1px;
+			}
+			&:nth-child(2) {
+				height: 2px;
+			}
+			&:nth-child(3) {
+				height: 5px;
+			}
+			&:nth-child(4) {
+				height: 9px;
+			}
+			&:nth-child(5) {
+				height: 13px;
+			}
+			&:nth-child(6) {
+				height: 17px;
+			}
+			&:nth-child(7) {
+				height: 25px;
+			}
+		}
+	}
+}
