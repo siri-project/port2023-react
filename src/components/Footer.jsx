@@ -24,7 +24,7 @@ const Footer = () => {
 									<a href={footer.link}>{footer.title}</a>
 									<em>{footer.desc}</em>
 								</li>
-							))}
+							))};
 						</ul>
 					</div>
 					<div className="footer-right">
