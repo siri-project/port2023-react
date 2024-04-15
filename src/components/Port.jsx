@@ -42,14 +42,14 @@ const Port = () => {
 
 				<div className="port-wrap">
 					{portText.map((port, key) => (
-						<article className="{`port-item p${key+1}`}" key={key}>
+						<article className={`port-item p${key+1}`} key={key}>
 							<span className="num">{port.num}.</span>
-							<a href="{port.code}" target="blank" className="img" rel="noreferrer">
-								<img src="{port.img}" alt="{port.name}" />
+							<a href={port.code} target="blank" className="img" rel="noreferrer">
+								<img src={port.img} alt={port.name} />
 							</a>
 							<h3 className="title">{port.title}</h3>
 							<p className="desc">{port.desc}</p>
-							<a href="{port.view}" target="blank" className="site" rle="noreferrer">사이트 보기</a>
+							<a href={port.view} target="blank" className="site" rle="noreferrer">사이트 보기</a>
 						</article>
 					))};
 				</div>
