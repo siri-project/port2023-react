@@ -29,7 +29,7 @@ const Port = () => {
 		});
 
 		return () => {
-			scrollTween.ju==kill();
+			scrollTween.kill();
 		};
 	});
 

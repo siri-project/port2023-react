@@ -13,7 +13,7 @@ const lenis = () => {
 
 	requestAnimationFrame(raf);
 
-	lenis.on("scorll", (e) => {
+	lenis.on("scroll", (e) => {
 		consle.log(e);
 	});
 };
