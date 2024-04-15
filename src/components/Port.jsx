@@ -1,62 +1,40 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
-import port1 from "../assets/img/about.jpg";
-import port2 from "../assets/img/about.jpg";
-import port3 from "../assets/img/about.jpg";
-import port4 from "../assets/img/about.jpg";
-import port5 from "../assets/img/about.jpg";
-
-const portText = [
-	{
-		num: "01",
-		title: "포트폴리오 1",
-		desc: "포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다.",
-		img: port1,
-		code: "#",
-		view: "#",
-		name: "my portfolio",
-	},
-	{
-		num: "02",
-		title: "포트폴리오 2",
-		desc: "포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다.",
-		img: port2,
-		code: "#",
-		view: "#",
-		name: "my portfolio",
-	},
-	{
-		num: "03",
-		title: "포트폴리오 3",
-		desc: "포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다.",
-		img: port3,
-		code: "#",
-		view: "#",
-		name: "my portfolio",
-	},
-	{
-		num: "04",
-		title: "포트폴리오 4",
-		desc: "포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다.",
-		img: port4,
-		code: "#",
-		view: "#",
-		name: "my portfolio",
-	},
-	{
-		num: "05",
-		title: "포트폴리오 5",
-		desc: "포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다. 포트폴리오 설명을 기재합니다.",
-		img: port5,
-		code: "#",
-		view: "#",
-		name: "my portfolio",
-	},
-]
+import { portText } from "../constants";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Port = () => {
+	const horizontalRef = useRef(null);
+	const sectionsRef = useRef([]);
+
+	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		const horizontal = horizontalRef.current;
+		const sections = sectionsRef.current;
+
+		let scrollTween = gsap.to(sections, {
+			xPercent: -120 * (sections.length -1 ),
+			ease: "none",
+			scrollTrigger: {
+				trigger: horizontal,
+				start: "top 56px",
+				end: () => "+=" + horizontal.offsetWidth,
+				pin: true,
+				scrub: 1,
+				invalidateOnRefresh: true,
+				anticipatePin: 1,
+			}
+		});
+
+		return () => {
+			scrollTween.ju==kill();
+		};
+	});
+
 	return (
-		<section id="port">
+		<section id="port" ref="horizontalRef">
 			<div className="port-inner">
 				<div className="port-title">
 					portfolio <em>포폴 작업물</em>

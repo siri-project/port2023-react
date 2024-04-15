@@ -1,12 +1,5 @@
 import React from "react";
-
-const footerText = [
-	{
-		title: "github",
-		desc: "깃헙에 오시면 더 많은 소스를 볼 수 있습니다.",
-		link: "https://github.com/siri-project",
-	},
-];
+import { footerText } from "../constants";
 
 const Footer = () => {
 	return (
