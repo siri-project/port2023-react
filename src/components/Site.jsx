@@ -8,8 +8,8 @@ const Site = () => {
 				<h2 className="site-title">Site Coding <em>나의 작업물</em></h2>
 				<div className="site-wrap">
 					{siteText.map((site, key) => (
-						<article className={`site-item s${key+1}`} key="{key}">
-							<span className="num">${key+1}.</span>
+						<article className={`site-item s${key+1}`} key={key}>
+							<span className="num">{key+1}.</span>
 							<div className="text">
 								<div>{site.text[0]}</div>
 								<div>{site.text[1]}</div>

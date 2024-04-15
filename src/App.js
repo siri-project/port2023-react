@@ -14,7 +14,7 @@ const App = () => { // App 상수 선언
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" elemen={<HomeView />} />
+				<Route path="/" element={<HomeView />} />
 			</Routes>
 		</BrowserRouter>
 	);

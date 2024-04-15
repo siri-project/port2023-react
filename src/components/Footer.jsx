@@ -24,13 +24,13 @@ const Footer = () => {
 									<a href={footer.link}>{footer.title}</a>
 									<em>{footer.desc}</em>
 								</li>
-							))};
+							))}
 						</ul>
 					</div>
-					<div className="footer-right">
-						&copy; 2024 siri<br />
-						이 사이트는 리액트를 이용하여 제작하였습니다.
-					</div>
+				</div>
+				<div className="footer-right">
+					&copy; 2024 siri<br />
+					이 사이트는 리액트를 이용하여 제작하였습니다.
 				</div>
 			</div>
 		</footer>

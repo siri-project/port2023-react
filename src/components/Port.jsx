@@ -25,7 +25,7 @@ const Port = () => {
 				scrub: 1,
 				invalidateOnRefresh: true,
 				anticipatePin: 1,
-			}
+			},
 		});
 
 		return () => {
@@ -34,7 +34,7 @@ const Port = () => {
 	});
 
 	return (
-		<section id="port" ref="horizontalRef">
+		<section id="port" ref={horizontalRef}>
 			<div className="port-inner">
 				<div className="port-title">
 					portfolio <em>포폴 작업물</em>
@@ -42,7 +42,7 @@ const Port = () => {
 
 				<div className="port-wrap">
 					{portText.map((port, key) => (
-						<article className={`port-item p${key+1}`} key={key}>
+						<article className={`port-item p${key+1}`} key={key} ref={(el) => (sectionsRef.current[key] = el)}>
 							<span className="num">{port.num}.</span>
 							<a href={port.code} target="blank" className="img" rel="noreferrer">
 								<img src={port.img} alt={port.name} />
@@ -51,7 +51,7 @@ const Port = () => {
 							<p className="desc">{port.desc}</p>
 							<a href={port.view} target="blank" className="site" rle="noreferrer">사이트 보기</a>
 						</article>
-					))};
+					))}
 				</div>
 			</div>
 		</section>

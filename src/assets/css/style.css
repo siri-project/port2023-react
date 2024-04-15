@@ -200,16 +200,16 @@ button {
   font-size: 10px;
   color: var(--black200);
 }
-#header .haeder-nav li {
+#header .header-nav li {
   display: inline;
 }
-#header .haeder-nav a {
+#header .header-nav a {
   position: relative;
   padding: 14px;
   font-size: 14px;
   text-transform: uppercase;
 }
-#header .haeder-nav a::before {
+#header .header-nav a::before {
   content: "";
   position: absolute;
   bottom: 10px;
@@ -220,20 +220,20 @@ button {
   transform: scaleX(0);
   transition: all 0.3s;
 }
-#header .haeder-nav a:hover::before {
+#header .header-nav a:hover::before {
   transform: scaleX(1);
 }
 @media (max-width: 800px) {
-  #header .haeder-nav {
+  #header .header-nav {
     display: none;
   }
-  #header .haeder-nav.show {
+  #header .header-nav.show {
     display: block;
   }
-  #header .haeder-nav.show + .header-nav-mobile span::before, #header .haeder-nav.show + .header-nav-mobile span::after {
+  #header .header-nav.show + .header-nav-mobile span::before, #header .header-nav.show + .header-nav-mobile span::after {
     width: 20px;
   }
-  #header .haeder-nav ul {
+  #header .header-nav ul {
     position: absolute;
     top: 68px;
     right: 0;
@@ -245,11 +245,11 @@ button {
     -webkit-backdrop-filter: blur(15px);
             backdrop-filter: blur(15px);
   }
-  #header .haeder-nav ul li {
+  #header .header-nav ul li {
     display: block;
     text-align: right;
   }
-  #header .haeder-nav ul a {
+  #header .header-nav ul a {
     display: inline-block;
     padding: 10px;
   }
@@ -549,7 +549,7 @@ button {
   font-size: 1.25rem;
   font-weight: 400;
 }
-#site .site-wrap {
+#site .site-item {
   position: -webkit-sticky;
   position: sticky;
   left: 0;
@@ -559,43 +559,43 @@ button {
   justify-content: center;
   flex-direction: column;
 }
-#site .site-wrap.s1 {
+#site .site-item.s1 {
   top: 180px;
   background-color: var(--subBg100);
 }
 @media (max-width: 800px) {
-  #site .site-wrap.s1 {
+  #site .site-item.s1 {
     top: 140px;
   }
 }
-#site .site-wrap.s2 {
+#site .site-item.s2 {
   top: 200px;
   background-color: var(--subBg200);
 }
 @media (max-width: 800px) {
-  #site .site-wrap.s2 {
+  #site .site-item.s2 {
     top: 160px;
   }
 }
-#site .site-wrap.s3 {
+#site .site-item.s3 {
   top: 220px;
   background-color: var(--subBg300);
 }
 @media (max-width: 800px) {
-  #site .site-wrap.s3 {
+  #site .site-item.s3 {
     top: 180px;
   }
 }
-#site .site-wrap.s4 {
+#site .site-item.s4 {
   top: 240px;
   background-color: var(--subBg400);
 }
 @media (max-width: 800px) {
-  #site .site-wrap.s4 {
+  #site .site-item.s4 {
     top: 200px;
   }
 }
-#site .site-wrap .num {
+#site .site-item .num {
   position: absolute;
   top: 1vw;
   left: 1vw;
@@ -605,17 +605,17 @@ button {
   font-weight: 900;
 }
 @media (max-width: 800px) {
-  #site .site-wrap .num {
+  #site .site-item .num {
     top: 20px;
     left: 20px;
     font-size: 80px;
   }
 }
-#site .site-wrap .text {
+#site .site-item .text {
   margin-bottom: 1rem;
   text-align: center;
 }
-#site .site-wrap .text > div {
+#site .site-item .text > div {
   line-height: 1;
   font-family: var(--mainEng-font);
   font-size: 3vw;
@@ -624,15 +624,15 @@ button {
   text-transform: uppercase;
 }
 @media (max-width: 800px) {
-  #site .site-wrap .text > div {
+  #site .site-item .text > div {
     font-size: 26px;
   }
 }
-#site .site-wrap .title {
+#site .site-item .title {
   margin-bottom: 1rem;
   font-family: var(--mainKor-font);
 }
-#site .site-wrap .btn a {
+#site .site-item .btn a {
   margin: 0 2px;
   font-size: 1rem;
   color: var(--black200);
@@ -648,10 +648,10 @@ button {
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-#site .site-wrap .btn a:hover {
+#site .site-item .btn a:hover {
   color: var(--black);
 }
-#site .site-wrap .info {
+#site .site-item .info {
   position: absolute;
   bottom: 3%;
   left: 0;
@@ -663,14 +663,14 @@ button {
   border-bottom: 1px solid var(--black);
 }
 @media (max-width: 800px) {
-  #site .site-wrap .info {
+  #site .site-item .info {
     flex-direction: column;
     width: 90%;
     margin-left: 5%;
     padding: 5px 0;
   }
 }
-#site .site-wrap .info span {
+#site .site-item .info span {
   padding: 3px 0;
   font-family: var(--mainKor-font);
   font-size: 12px;
@@ -704,7 +704,7 @@ button {
 #port .port-wrap {
   display: flex;
   flex-wrap: wrap;
-  width: 3500px;
+  width: 7000px;
 }
 #port .port-item {
   width: 500px;
